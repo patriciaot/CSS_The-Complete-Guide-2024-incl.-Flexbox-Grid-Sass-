@@ -1,3 +1,19 @@
 section{
     background: #ff1b68;
-}
+} /*  element selector */
+
+#product-overview{
+    background: blue;
+} /* Id selector   */
+
+
+h1{
+    color: white;
+    font-family: "Bree Serif", serif;
+    font-weight:400;
+    font-style: normal;
+} /*element selector*/
+
+.section-title{
+    color: #2ddf5c;
+} /*class selector*/
