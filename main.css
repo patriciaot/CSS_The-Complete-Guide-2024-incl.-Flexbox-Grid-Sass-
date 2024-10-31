@@ -1,3 +1,4 @@
+
 section{
     background: #ff1b68;
 } /*  element selector */
@@ -6,14 +7,20 @@ section{
     background: blue;
 } /* Id selector   */
 
-
-h1{
+#product-overview h1{ /*Se usó un combinador. En este caso, significa que cualquier etiqueta h1 dentro de product-overview se le aplicarán los estilos que esten aquí. */
     color: white;
     font-family: "Bree Serif", serif;
     font-weight:400;
     font-style: normal;
 } /*element selector*/
 
+
 .section-title{
     color: #2ddf5c;
+    /*font-family: inherit; /* inherit: Significa "utiliza el estilo heredado". En este caso, usará Montserrat, aunque en la consola aparezca que no está usando esa, sí lo está. Sin enmbargo, no es la mejor opción que podemos utilizar.*/
 } /*class selector*/
+
+
+body{
+    font-family: "Montserrat", sans-serif;
+}/* Tiene mayor especificidad que usar el selector universal (*)   */
