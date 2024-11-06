@@ -12,7 +12,7 @@ section{
     font-family: "Bree Serif", serif;
     font-weight:400;
     font-style: normal;
-} /*element selector*/
+} /*element selector*/ /* Además se está utilizando un combinador descendiente.  */
 
 
 .section-title{
@@ -24,3 +24,20 @@ section{
 body{
     font-family: "Montserrat", sans-serif;
 }/* Tiene mayor especificidad que usar el selector universal (*)   */
+
+
+
+
+
+
+
+
+/* DICCIONARIO
+
+- Selectores: div, .blog-post, #main-title, [disabled], *
+-Propiedades: background-color, width, color, margin, display
+-Valores: red, 30%, #fa923f, 10px, block
+-Declaración: Es la regla. Se compone de propiedades y sus respectivos valores.
+
+ */
+
