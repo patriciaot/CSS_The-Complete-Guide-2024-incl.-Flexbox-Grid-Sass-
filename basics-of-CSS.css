@@ -12,7 +12,7 @@ section{
     font-family: "Bree Serif", serif;
     font-weight:400;
     font-style: normal;
-} /*element selector*/ /* Además se está utilizando un combinador descendiente.  */
+} /*id selector + element selector*/ /* Como se está utilizando dos tipos de selectores al mismo tiempo, se convierte en un combinador, en este caso, un combinador descendiente.  */
 
 
 .section-title{
