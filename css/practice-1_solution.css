@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+}
+
+.highlighted-code {
+    color: green;
+}
+
+#assignment-instructions {
+    font-family: sans-serif;
+    color: blue;
+}
+
+code {
+    font-family: monospace;
+    color: red;
+}
+
+li + li {
+    background: black;
+    color: white;
+} /* Selecciona cualquier elemento de la lista (li) que directamente siga después de un elemento de la lista (li). Aquí todos los elementos de la lista tendrán estas reglas, menos
+el primer elemento de la lista, ya que el primero no sigue después de un (li), sino de un (ol)*/
+
+ol > li {
+    background: black;
+    color: white;
+} /*Usando el combinador hijo directo*/
