@@ -5,13 +5,13 @@ body{
 
 
 section{
-    background: #ff1b68;
+    background: #ff1b68; /* En este ejemplo no usamos la propiedad completa: background-color.    */
 }
 
 #product-overview{
     background: blue;
     padding: 20px;
-    border: 5px black solid;
+    border: 5px black solid; /* uso de propiedad clave*/
     margin: 20px;
 } /* Ejemplo de aplicación de todas las capas que conforman a la caja*/
 
