@@ -10,9 +10,12 @@ section{
 
 #product-overview{
     background: blue;
-    padding: 20px;
-    border: 5px black solid; /* uso de propiedad clave*/
-    margin: 20px;
+    width: 50%; /*Su ancho si es literalmente el 50% de la página porque el contenedor que lo rodea es un main element, que tambien es un block level element, por lo que tiene un ancho del 100%  */
+    height: 528px; /*  Si quisiera que tomara todo el height d la página, tendria que ir a cada elemento padre, en este caso, main y body y ponerles de height un 100% para que literalmente ocupara
+    ese 100%, pero mientras tanto, si no soy asi de especifica, solo tomara una cantidad relativa, o sea, no será el 538px del total de la pag, por ejemplo*/
+    /*padding: 20px;
+    border: 5px black solid; /* uso de propiedad clave
+    margin: 20px;*/
 } /* Ejemplo de aplicación de todas las capas que conforman a la caja*/
 
 #product-overview h1{
