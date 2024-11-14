@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+} /* Esta propiedad se recomienda ponerla en el selector universal para que aplique a todos los elementos y no se sobrescriba en ningun momento. */
+
 body{
     font-family: "Montserrat", sans-serif;
     margin: 0; /*Quitamos el margin que venía por default, que eran 8px, y le pusimos 0*/
@@ -12,10 +16,11 @@ section{
     background: blue;
     width: 100%; /*Su ancho si es literalmente el 100% de la página porque el contenedor que lo rodea es un main element, que tambien es un block level element, por lo que tiene un ancho del 100%  */
     height: 528px; /*  Si quisiera que tomara todo el height d la página, tendria que ir a cada elemento padre, en este caso, main y body y ponerles de height un 100% para que literalmente ocupara
-    ese 100%, pero mientras tanto, si no soy asi de especifica, solo tomara una cantidad relativa, o sea, no será el 538px del total de la pag, por ejemplo*/
+    ese 100%, pero mientras tanto, si no soy asi de especifica, solo tomara una cantidad relativa, o sea, no será el 528px del total de la pag, por ejemplo*/
     padding: 10px;
     border: 5px black solid; /* uso de propiedad clave */
     margin: 20px;
+    /*box-sizing: border-box; /* Es comunmente usado como propiedad default de todos los elementos. */
 } /* Ejemplo de aplicación de todas las capas que conforman a la caja*/
 
 #product-overview h1{
@@ -29,4 +34,34 @@ section{
 .section-title{
     color: #2ddf5c;
 }
+
+
+/* PRACTICA PROPIEDAD BOX-SIZING*/
+
+.prueba-boxSize-1{
+    width:80%;
+    height:100px;
+    border: 5px black solid;
+    background: white;
+}
+
+.prueba-boxSize-2{
+    width:80%;
+    height:100px;
+    padding:10px;
+    border: 5px red solid;
+    background: white;
+} /*  Aparece mas grande porque ya se incluye el padding)*/
+
+/*
+En un principio, la primera caja aparece mas chica que la segunda ya que sin la propiedad de box-sizing, la anchura y la altura de los elementos por default se calcula así:
+
+width + padding + border = actual width of an element
+height + padding + border = actual height of an element
+
+Es decir, la primera caja va a tomar en cuenta el 80% del width + el 5px (de lado izq + derecho) del border; en cambio, la caja dos, va a tomar en cuenta el 80% del width + 5px del border (de lado izq + derecho) + el padding porque
+se lo asignamos, razón por la que la caja es más grande.
+
+Si le agregas la propiedad box-sizing: border-box; en un elemento, tanto el border como el padding se incluyen, sin excepcion, no importa si se lo asignaste o no, por eso ya ambos se ven del mismo tamaño.
+*/
 
