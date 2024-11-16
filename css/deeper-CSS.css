@@ -18,8 +18,8 @@ section{
     height: 528px; /*  Si quisiera que tomara todo el height d la página, tendria que ir a cada elemento padre, en este caso, main y body y ponerles de height un 100% para que literalmente ocupara
     ese 100%, pero mientras tanto, si no soy asi de especifica, solo tomara una cantidad relativa, o sea, no será el 528px del total de la pag, por ejemplo*/
     padding: 10px;
-    border: 5px black solid; /* uso de propiedad clave */
-    margin: 20px;
+    /*border: 5px black solid; /* uso de propiedad clave */
+    /*margin: 20px;
     /*box-sizing: border-box; /* Es comunmente usado como propiedad default de todos los elementos. */
 } /* Ejemplo de aplicación de todas las capas que conforman a la caja*/
 
