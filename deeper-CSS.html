@@ -14,21 +14,21 @@
 <body>
 
 <!--Navbar-->
-<header>
+<header class="main-header">
   <div>
     <a href="deeper-CSS.html">
       uHost
     </a>
   </div>
-  <nav>
-    <ul>
-      <li>
+  <nav class="main-nav">
+    <ul class="main-nav__items">
+      <li class="main-nav__item">
         <a href="packages/deeper-CSS.html">Packages</a>
       </li>
-      <li>
+      <li class="main-nav__item">
         <a href="customers/deeper-CSS.html">Customers</a>
       </li>
-      <li>
+      <li class="main-nav__item">
         <a href="start-hosting/deeper-CSS.html">Start Hosting</a>
       </li>
     </ul>
@@ -55,11 +55,11 @@
   </section>
 
   <section class="prueba-boxSize-1">
-    Esta seccion es mas pequeña (width es 80% y altura es 100px).
+    Esta seccion es mas pequeña sin la propiedad box-sizing: border-box; (width es 80% y altura es 100px).
   </section>
 
   <section class="prueba-boxSize-2">
-    Esta seccion es mas grande (width es 80% y altura es 100px).
+    Esta seccion es mas grande sin la propiedad box-sizing: border-box; (width es 80% y altura es 100px).
   </section>
 
 </main>

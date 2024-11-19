@@ -65,3 +65,14 @@ se lo asignamos, razón por la que la caja es más grande.
 Si le agregas la propiedad box-sizing: border-box; en un elemento, tanto el border como el padding se incluyen, sin excepcion, no importa si se lo asignaste o no, por eso ya ambos se ven del mismo tamaño.
 */
 
+
+.main-header{
+    background: darkseagreen;
+    width: 100%;
+    padding: 8px 16px;
+
+}
+
+.main-nav__item{
+    display: inline-block;
+}
