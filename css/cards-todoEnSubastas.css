@@ -19,12 +19,13 @@
 
                    /*  Primera card   */
 
+
 .card_button--container{
     position: absolute;
     display:flex;
     justify-content: center;
     align-items: center;
-    margin: 3px;
+    margin: 7px 3px;
 }
 
 .card_button{
@@ -35,7 +36,7 @@
     height: 40px;
     border: none;
     border-radius: 50%;
-    cursor: pointer;
+    cursor: default;
     position: relative;
     overflow: hidden;
     transition-duration: 0.3s;
@@ -43,7 +44,11 @@
     background:  linear-gradient(to right, #bf953f, #d9a94b, #eeddb9, #d9a94b, #bf953f);
 }
 
-/* plus sign */
+.card_button *{
+    cursor: default;
+}
+
+
 .sign {
     width: 100%;
     transition-duration: 0.3s;
@@ -60,48 +65,56 @@
     fill: #AA771C;
 }
 
-/* text */
 .text {
     position: absolute;
     right: 0;
-    width: 85%;
+    width: 0;
     opacity: 0;
     color: #8B572A;
     font-size: 11px;
     font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease, width 0.5s ease;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
 }
-/* hover effect on button width */
-.card_button--activated:hover,
+
+/* efecto al abrir */
 .card_button--activated.open{
     background-color: black;
     width: 175px;
     border-radius: 40px;
-    transition-duration: 0.3s;
+    transition: all 0.5s ease;
+    overflow: hidden;
 }
 
-.card_button--activated:hover .sign,
 .card_button--activated.open .sign{
     width: 17%;
-    transition-duration: 0.3s;
+    transition: width 0.5s ease;
     padding-left: 0;
 }
 
-.card_button--activated:hover .sign svg path,
 .card_button--activated.open .sign svg path{
     fill: #8B572A;
+    transition: fill 0.5s ease;
 }
 
-/* hover effect button's text */
-.card_button--activated:hover .text,
-.card_button--activated.open .text{
+
+.card_button--activated.open .text {
     opacity: 1;
-    width: 85%;
-    font-size: 11px;
-    transition-duration: 0.3s;
-    padding-left: 5px;
-    padding-right: 5px;
+    width: calc(111% - 50px);
+    transform: translateX(0);
 }
 
+/* Animación de cierre */
+.card_button:not(.open) .text {
+    opacity: 0;
+    width: 0;
+    transform: translateX(-50%);
+}
 
                                                      /* SEGUNDA CARD */
 
@@ -156,7 +169,6 @@
     z-index: -1;
     box-shadow: 140px -140px #b38728;
 }
-
 
 
 @keyframes pulse-animation {

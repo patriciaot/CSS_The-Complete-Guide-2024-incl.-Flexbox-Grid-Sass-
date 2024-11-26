@@ -1,4 +1,3 @@
-
 <!--Efecto boton card 1-->
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -7,18 +6,35 @@
 
     // Función para mostrar la notificación
     const showNotification = () => {
-    button.classList.add("open"); // Añade la clase "open" para activar el efecto
+    button.classList.add("open");
 };
 
     // Función para ocultar la notificación
     const hideNotification = () => {
-    button.classList.remove("open"); // Remueve la clase "open" para volver al estado inicial
+    button.classList.remove("open");
 };
 
-    // Ejecutar el efecto automáticamente
+    // Configurar el bucle continuo
+    const startNotificationLoop = () => {
+    let isOpen = false;
+
+    // Alternar entre mostrar y ocultar con tiempos ajustados
+    setInterval(() => {
+    if (!isOpen) {
+    showNotification();
+    isOpen = true;
+
+    // Cierra después de 1 segundo
     setTimeout(() => {
-    showNotification(); // Muestra la notificación
-    setTimeout(hideNotification, 3000); // Oculta la notificación después de 3 segundos
-}, 1000); // Espera 1 segundo antes de mostrar la notificación
+    hideNotification();
+    isOpen = false;
+}, 3000); // Tiempo visible
+}
+}, 2000); // Inicia un nuevo ciclo cada 2 segundos
+};
+
+    // Inicia el bucle
+    startNotificationLoop();
 });
+
 
