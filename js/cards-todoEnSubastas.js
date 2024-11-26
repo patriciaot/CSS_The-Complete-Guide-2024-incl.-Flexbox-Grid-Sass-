@@ -1,4 +1,4 @@
-<!--Efecto boton card 1-->
+//EFECTO BOTON CARD 1
 
     document.addEventListener("DOMContentLoaded", () => {
     // Selecciona el botón
