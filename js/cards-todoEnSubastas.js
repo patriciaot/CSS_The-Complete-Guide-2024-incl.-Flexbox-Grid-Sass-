@@ -2,20 +2,20 @@
 
     document.addEventListener("DOMContentLoaded", () => {
     // Selecciona el botón
-    const button = document.querySelector(".card_button--activated");
+    let button = document.querySelector(".card_button--activated");
 
     // Función para mostrar la notificación
-    const showNotification = () => {
+    let showNotification = () => {
     button.classList.add("open");
 };
 
     // Función para ocultar la notificación
-    const hideNotification = () => {
+    let hideNotification = () => {
     button.classList.remove("open");
 };
 
     // Configurar el bucle continuo
-    const startNotificationLoop = () => {
+    let startNotificationLoop = () => {
     let isOpen = false;
 
     // Alternar entre mostrar y ocultar con tiempos ajustados
