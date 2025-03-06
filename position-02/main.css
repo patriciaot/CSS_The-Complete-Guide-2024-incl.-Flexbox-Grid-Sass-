@@ -31,5 +31,12 @@ body {
 .parent .child-1 {
     position: fixed;
     width: 400px; /*  para los elementos inline, el width no tiene efecto  */
-    top: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 5%;
+    box-sizing: border-box;
+
 }
